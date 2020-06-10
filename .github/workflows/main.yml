@@ -24,11 +24,11 @@ jobs:
       
     - name: Setup Node.js environment
       uses: actions/setup-node@v2-beta
-       with:
-      version: 12
+      with:
+        version: 12
     - name: GitHub Action for Yarn
       uses: Borales/actions-yarn@v2.3.0
-       with:
+      with:
         # Yarn command
         cmd: install
         
@@ -39,4 +39,4 @@ jobs:
       run: npm install -g surge
       
     - name: deploying on surge
-      run: surge ./build http://watery-rub.surge.sh --token ${{secrets.SURGE_TOKEN1}}}}
+      run: surge ./build http://watery-rub.surge.sh --token ${{ secrets.SURGE_TOKEN1 }}
